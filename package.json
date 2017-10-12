@@ -1,16 +1,25 @@
 {
   "name": "cra-ssr",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://cra-ssr.herokuapp.com/",
+  "private": false,
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-scripts": "1.0.14"
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.6",
+    "react-scripts": "1.0.14",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "NODE_ENV=development node server/index.js",
+    "deploy": "NODE_ENV=production node server/index.js"
   }
 }
