@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 const defaultUrl =
   process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
-    : 'https://cra-ssr.herokuapp.com/';
+    : 'https://cra-ssr.herokuapp.com';
 const defaultTitle = 'SSR Website';
 const defaultDescription =
   'Here is a pretty awesome meta tag description for my website.';
