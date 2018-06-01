@@ -25,14 +25,21 @@ class Profile extends Component {
     return true;
   }
 
+  getImage(image) {
+    return process.env.NODE_ENV === 'development'
+      ? 'http://localhost:3000/' + image
+      : 'https://cra-ssr.herokuapp.com/' + image;
+  }
+
   render() {
-    const { name, id } = this.props.currentProfile;
+    const { name, id, image } = this.props.currentProfile;
 
     return (
       <Page
         id="profile"
         title={name}
         description={`This is user profile number ${id}`}
+        image={this.getImage(image)}
       >
         <p>
           <b>Name:</b> {name}

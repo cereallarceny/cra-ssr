@@ -25,12 +25,14 @@ export const getCurrentProfile = id => dispatch =>
       if (id === 1) {
         profile = {
           id,
-          name: 'Pekka Rinne'
+          name: 'Pekka Rinne',
+          image: 'pekka.jpg'
         };
       } else {
         profile = {
           id,
-          name: 'Viktor Arvidsson'
+          name: 'Viktor Arvidsson',
+          image: 'arvidsson.jpg'
         };
       }
 
