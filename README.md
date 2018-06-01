@@ -2,6 +2,10 @@
 
 _SSR with all the goodies, without ejecting._
 
+- [Link to Tutorial](https://medium.com/@cereallarceny/server-side-rendering-with-create-react-app-fiber-react-router-v4-helmet-redux-and-thunk-275cb25ca972)
+- [Deployed application](https://cra-ssr.herokuapp.com/)
+- [Github Gist for server folder](https://gist.github.com/cereallarceny/ee1b86227aabaf4a4b2a3144b84dfaa2)
+
 ## Goals
 
 - **Zero modifications to your existing CRA application**
@@ -20,6 +24,12 @@ _SSR with all the goodies, without ejecting._
 - **Basic authentication with cookie storage** (`/login`, `/dashboard`, `/logout`)
 - Not found (404, etc.) page
 
+## Installation
+
+1.  Install dependencies via `yarn install`
+2.  To run locally, use `yarn start`
+3.  To run under SSR mode, use `yarn build && yarn serve`
+
 ## Why?
 
 Server-side rendering is a requirement for many modern web applications to appear correctly in search engines and social media parsers.
@@ -32,3 +42,7 @@ Server-side rendering is a requirement for many modern web applications to appea
 
 **Question:** Have you ever created a web application with a lot of content on your page that ends up taking a long time for your users to load in poor Internet conditions?<br />
 **Answer:** _Server-side rendering_
+
+## Contribute
+
+Do what you normally do - fork and PR.
