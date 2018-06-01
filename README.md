@@ -2,7 +2,7 @@
 
 _SSR with all the goodies, without ejecting._
 
-- [Link to Tutorial](https://medium.com/@cereallarceny/server-side-rendering-with-create-react-app-fiber-react-router-v4-helmet-redux-and-thunk-275cb25ca972)
+- [Link to Tutorial](https://medium.com/@cereallarceny/server-side-rendering-in-create-react-app-with-all-the-goodies-without-ejecting-4c889d7db25e)
 - [Deployed application](https://cra-ssr.herokuapp.com/)
 - [Github Gist for server folder](https://gist.github.com/cereallarceny/ee1b86227aabaf4a4b2a3144b84dfaa2)
 
