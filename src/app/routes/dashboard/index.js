@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Page from '../../components/page';
 
 const Dashboard = ({ currentUser }) => (
-  <Page id="dashboard" title="Dashboard">
+  <Page id="dashboard" title="Dashboard" noCrawl>
     We have a secret dashboard that only cool kids can access.
     <p>
       <b>Name:</b> {currentUser.name}
