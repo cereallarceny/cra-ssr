@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import { createBrowserHistory, createMemoryHistory } from 'history';
 import rootReducer from './modules';
 
-// A nice helper to tell us if we're on
+// A nice helper to tell us if we're on the server
 export const isServer = !(
   typeof window !== 'undefined' &&
   window.document &&
@@ -36,7 +36,7 @@ export default (url = '/') => {
     ...enhancers
   );
 
-  // Get the preloaded state from the server
+  // Do we have preloaded state available? Great, save it.
   const initialState = !isServer ? window.__PRELOADED_STATE__ : {};
 
   // Delete it once we have it stored in a variable
@@ -44,7 +44,7 @@ export default (url = '/') => {
     delete window.__PRELOADED_STATE__;
   }
 
-  // Create and export the store
+  // Create the store
   const store = createStore(
     connectRouter(history)(rootReducer),
     initialState,
