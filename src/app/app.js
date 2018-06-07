@@ -23,7 +23,10 @@ class App extends Component {
   render() {
     return (
       <div id="app">
-        <Header isAuthenticated={this.props.isAuthenticated} />
+        <Header
+          isAuthenticated={this.props.isAuthenticated}
+          current={this.props.location.pathname}
+        />
         <div id="content">
           <Routes />
         </div>

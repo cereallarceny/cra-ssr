@@ -11,7 +11,7 @@ _SSR with all the goodies, without ejecting._
 - **Zero modifications to your existing CRA application**
 - Create React App **without ejecting**
 - React 16 (fiber, baby!)
-- React Router Redux v5 (with Thunk)
+- React Router v4 (with Thunk)
 - **Full SEO support** via React Helmet
 - **Preloaded page data** via async/await and React Frontload
 - **Code splitting** via React Loadable

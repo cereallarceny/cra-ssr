@@ -8,12 +8,11 @@ import { renderToString } from 'react-dom/server';
 import Helmet from 'react-helmet';
 import { Provider } from 'react-redux';
 import { StaticRouter } from 'react-router';
-import { replace } from 'react-router-redux';
 import { Frontload, frontloadServerRender } from 'react-frontload';
 import Loadable from 'react-loadable';
 
 // Our store, entrypoint, and manifest
-import store from '../src/store';
+import createStore from '../src/store';
 import App from '../src/app/app';
 import manifest from '../build/asset-manifest.json';
 
@@ -54,8 +53,8 @@ export default (req, res) => {
         return res.status(404).end();
       }
 
-      // Push the current url into the store to let Redux know what state to load
-      store.dispatch(replace(req.url));
+      // Create a store (with a memory history) from our current url
+      const { store } = createStore(req.url);
 
       // If the user has a cookie (i.e. they're signed in) - set them as the current user
       // Otherwise, we want to set the current state to be logged out, just in case this isn't the default

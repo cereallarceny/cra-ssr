@@ -3,11 +3,14 @@ import { render, hydrate } from 'react-dom';
 import { Provider } from 'react-redux';
 import Loadable from 'react-loadable';
 import { Frontload } from 'react-frontload';
-import { ConnectedRouter } from 'react-router-redux';
-import store, { history, isServer } from './store';
+import { ConnectedRouter } from 'connected-react-router';
+import createStore from './store';
 
 import App from './app/app';
 import './index.css';
+
+// Create a store and get back itself and its history object
+const { store, history } = createStore();
 
 // Running locally, we should run on a <ConnectedRouter /> rather than on a <StaticRouter /> like on the server
 // Let's also let React Frontload explicitly know we're not rendering on the server here
