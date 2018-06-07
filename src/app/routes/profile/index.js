@@ -25,12 +25,6 @@ class Profile extends Component {
     return true;
   }
 
-  getImage(image) {
-    return process.env.NODE_ENV === 'development'
-      ? 'http://localhost:3000/' + image
-      : 'https://cra-ssr.herokuapp.com/' + image;
-  }
-
   render() {
     const { name, id, image } = this.props.currentProfile;
 
@@ -39,7 +33,7 @@ class Profile extends Component {
         id="profile"
         title={name}
         description={`This is user profile number ${id}`}
-        image={this.getImage(image)}
+        image={image}
       >
         <p>
           <b>Name:</b> {name}
@@ -47,6 +41,7 @@ class Profile extends Component {
         <p>
           <b>ID:</b> {id}
         </p>
+        <img src={image} alt={name} style={{ width: '400px' }} />
       </Page>
     );
   }

@@ -4,7 +4,10 @@ import Page from '../../components/page';
 
 const Dashboard = ({ currentUser }) => (
   <Page id="dashboard" title="Dashboard" noCrawl>
-    We have a secret dashboard that only cool kids can access.
+    <p>
+      We have a secret dashboard that only cool kids can access.<br />Notice
+      that refreshing this page will retain the logged in status!
+    </p>
     <p>
       <b>Name:</b> {currentUser.name}
     </p>

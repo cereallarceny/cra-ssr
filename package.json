@@ -8,6 +8,7 @@
     "forcedomain": "^1.0.0",
     "ignore-styles": "^5.0.1",
     "js-cookie": "^2.2.0",
+    "md5-file": "^4.0.0",
     "morgan": "^1.9.0",
     "prettier": "^1.13.4",
     "react": "^16.4.0",
@@ -23,7 +24,10 @@
     "redux-thunk": "^2.3.0"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": ["prettier --single-quote --write", "git add"]
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",

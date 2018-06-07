@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
 import Helmet from 'react-helmet';
+import logo from '../../assets/logo.jpg';
 
 const SITE_URL =
   process.env.NODE_ENV === 'development'
@@ -12,7 +13,7 @@ const FACEBOOK_APP_ID = 'XXXXXXXXX';
 const defaultTitle = 'My Website';
 const defaultDescription =
   'This is a really awesome website where we can render on the server. Supa cool.';
-const defaultImage = `${SITE_URL}/logo.jpg`;
+const defaultImage = `${SITE_URL}${logo}`;
 const defaultTwitter = '@cereallarceny';
 const defaultSep = ' | ';
 
@@ -38,7 +39,7 @@ class Page extends Component {
     const theDescription = description
       ? description.substring(0, 155)
       : defaultDescription;
-    const theImage = image ? image : defaultImage;
+    const theImage = image ? `${SITE_URL}${image}` : defaultImage;
 
     const metaTags = [
       { itemprop: 'name', content: theTitle },

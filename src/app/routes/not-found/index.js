@@ -8,6 +8,6 @@ export default () => (
     description="This is embarrassing."
     noCrawl
   >
-    Super embarrassing.
+    <p>Super embarrassing.</p>
   </Page>
 );

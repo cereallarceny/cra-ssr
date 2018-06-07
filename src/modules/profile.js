@@ -1,3 +1,6 @@
+import pekka from '../app/assets/pekka.jpg';
+import arvidsson from '../app/assets/arvidsson.jpg';
+
 export const SET_CURRENT_PROFILE = 'auth/SET_CURRENT_PROFILE';
 
 const initialState = {
@@ -26,13 +29,13 @@ export const getCurrentProfile = id => dispatch =>
         profile = {
           id,
           name: 'Pekka Rinne',
-          image: 'pekka.jpg'
+          image: pekka
         };
       } else {
         profile = {
           id,
           name: 'Viktor Arvidsson',
-          image: 'arvidsson.jpg'
+          image: arvidsson
         };
       }
 
