@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import Loadable from 'react-loadable';
 import { Frontload } from 'react-frontload';
 import { ConnectedRouter } from 'react-router-redux';
-import store, { history } from './store';
+import store, { history, isServer } from './store';
 
 import App from './app/app';
 import './index.css';
@@ -23,13 +23,13 @@ const Application = (
 
 const root = document.querySelector('#root');
 
-// Render everything to the root - it's business time
 if (process.env.NODE_ENV === 'production') {
-  window.onload = () => {
-    Loadable.preloadReady().then(() => {
-      hydrate(Application, root);
-    });
-  };
+  // If we're running in production, we use hydrate to get fast page loads by just
+  // attaching event listeners after the initial render
+  Loadable.preloadReady().then(() => {
+    hydrate(Application, root);
+  });
 } else {
+  // If we're not running on the server, just render like normal
   render(Application, root);
 }
