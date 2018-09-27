@@ -6,6 +6,7 @@
   "dependencies": {
     "connected-react-router": "^4.3.0",
     "cookie-parser": "^1.4.3",
+    "cross-env": "^5.2.0",
     "forcedomain": "^1.0.0",
     "ignore-styles": "^5.0.1",
     "js-cookie": "^2.2.0",
@@ -35,6 +36,6 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
-    "serve": "NODE_ENV=production node ./server/index.js"
+    "serve": "cross-env NODE_ENV=production node ./server/index.js"
   }
 }
