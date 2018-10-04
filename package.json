@@ -4,39 +4,53 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "connected-react-router": "^4.3.0",
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/polyfill": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-plugin-dynamic-import-node": "^2.1.0",
+    "connected-react-router": "^4.5.0",
     "cookie-parser": "^1.4.3",
     "cross-env": "^5.2.0",
     "forcedomain": "^1.0.0",
     "ignore-styles": "^5.0.1",
     "js-cookie": "^2.2.0",
     "md5-file": "^4.0.0",
-    "morgan": "^1.9.0",
+    "morgan": "^1.9.1",
     "prettier": "^1.13.4",
-    "query-string": "^5.1.1",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-frontload": "^1.0.1",
+    "query-string": "^6.2.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-frontload": "^1.0.3",
     "react-helmet": "^5.2.0",
-    "react-loadable": "^5.4.0",
+    "react-loadable": "^5.5.0",
     "react-redux": "^5.0.7",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.4",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.0.4",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0"
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged",
     "serve": "cross-env NODE_ENV=production node ./server/index.js"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "husky": "^1.1.0",
+    "prettier": "1.14.3",
+    "pretty-quick": "^1.7.0"
   }
 }
