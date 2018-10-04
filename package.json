@@ -13,14 +13,15 @@
     "md5-file": "^4.0.0",
     "morgan": "^1.9.0",
     "prettier": "^1.13.4",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
+    "query-string": "^6.2.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
     "react-frontload": "^1.0.1",
     "react-helmet": "^5.2.0",
     "react-loadable": "^5.4.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.4",
+    "react-scripts": "2.0.3",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0"
   },
@@ -37,5 +38,11 @@
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
     "serve": "cross-env NODE_ENV=production node ./server/index.js"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
