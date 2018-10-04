@@ -17,7 +17,6 @@
     "js-cookie": "^2.2.0",
     "md5-file": "^4.0.0",
     "morgan": "^1.9.1",
-    "prettier": "^1.14.3",
     "query-string": "^6.2.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -30,18 +29,11 @@
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0"
   },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "precommit": "lint-staged",
     "serve": "cross-env NODE_ENV=production node ./server/index.js"
   },
   "browserslist": [
@@ -49,5 +41,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "husky": "^1.1.0",
+    "prettier": "1.14.3",
+    "pretty-quick": "^1.7.0"
+  }
 }
