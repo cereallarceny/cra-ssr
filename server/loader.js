@@ -112,7 +112,7 @@ export default (req, res) => {
 
           // Let's format those assets into pretty <script> tags
           const extraChunks = extractAssets(manifest, modules).map(
-            c => `<script type="text/javascript" src="/${c}"></script>`
+            c => `<script type="text/javascript" src="/${c.replace(/^\//, '')}"></script>`
           );
 
           // We need to tell Helmet to compute the right meta tags, title, and such
