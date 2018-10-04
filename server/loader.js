@@ -86,7 +86,7 @@ export default (req, res) => {
           <Loadable.Capture report={m => modules.push(m)}>
             <Provider store={store}>
               <StaticRouter location={req.url} context={context}>
-                <Frontload isServer>
+                <Frontload isServer={true}>
                   <App />
                 </Frontload>
               </StaticRouter>
