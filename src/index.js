@@ -17,7 +17,7 @@ const { store, history } = createStore();
 const Application = (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <Frontload noServerRender>
+      <Frontload noServerRender={true}>
         <App />
       </Frontload>
     </ConnectedRouter>
@@ -26,8 +26,8 @@ const Application = (
 
 const root = document.querySelector('#root');
 
-if (process.env.NODE_ENV === 'production') {
-  // If we're running in production, we use hydrate to get fast page loads by just
+if (root.hasChildNodes() === true) {
+  // If it's an SSR, we use hydrate to get fast page loads by just
   // attaching event listeners after the initial render
   Loadable.preloadReady().then(() => {
     hydrate(Application, root);
