@@ -1,7 +1,4 @@
-import pekka from '../app/assets/pekka.jpg';
-import arvidsson from '../app/assets/arvidsson.jpg';
-
-export const SET_CURRENT_PROFILE = 'auth/SET_CURRENT_PROFILE';
+export const SET_CURRENT_PROFILE = "auth/SET_CURRENT_PROFILE";
 
 const initialState = {
   currentProfile: {}
@@ -21,32 +18,19 @@ export default (state = initialState, action) => {
 };
 
 export const getCurrentProfile = id => dispatch =>
-  new Promise(resolve => {
-    setTimeout(() => {
-      let profile;
-
-      if (id === 1) {
-        profile = {
-          id,
-          name: 'Pekka Rinne',
-          image: pekka
-        };
-      } else {
-        profile = {
-          id,
-          name: 'Viktor Arvidsson',
-          image: arvidsson
-        };
+  fetch("http://localhost:8000/data/profile/" + id)
+    .then(res => res.json())
+    .then(
+      result => {
+        dispatch({
+          type: SET_CURRENT_PROFILE,
+          profile: result.profile
+        });
+      },
+      error => {
+        console.log(error.message);
       }
-
-      dispatch({
-        type: SET_CURRENT_PROFILE,
-        profile
-      });
-
-      resolve(profile);
-    }, 3000);
-  });
+    );
 
 export const removeCurrentProfile = () => dispatch =>
   new Promise(resolve => {
