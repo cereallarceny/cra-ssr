@@ -1,3 +1,5 @@
+**This repo is about to undergo major changes (for the better)... stay tuned - :heart: @cereallarceny**
+
 # Server-side rendering in Create React App
 
 _SSR with all the goodies, without ejecting._
