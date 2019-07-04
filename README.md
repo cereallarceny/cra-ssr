@@ -1,3 +1,11 @@
+# Deprecation notice
+
+It didn't take long.  The web has grown a lot since I first developed this project.  Lo and behold [Jared Palmer](https://github.com/jaredpalmer) has beat me to it.  I'm going to shut down shop at cra-ssr in favor of a better solution: [Razzle](https://github.com/jaredpalmer/razzle).
+
+**To anyone looking to use cra-ssr, I highly suggest you check out Razzle instead.**
+
+---
+
 # Server-side rendering in Create React App
 
 _SSR with all the goodies, without ejecting._

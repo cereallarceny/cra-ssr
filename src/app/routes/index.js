@@ -9,37 +9,43 @@ import NotFound from './not-found';
 const Homepage = Loadable({
   loader: () => import(/* webpackChunkName: "homepage" */ './homepage'),
   loading: () => null,
-  modules: ['homepage']
+  modules: ['homepage'],
+  webpack: () => [require.resolveWeak('./homepage')]
 });
 
 const About = Loadable({
   loader: () => import(/* webpackChunkName: "about" */ './about'),
   loading: () => null,
-  modules: ['about']
+  modules: ['about'],
+  webpack: () => [require.resolveWeak('./about')]
 });
 
 const Dashboard = Loadable({
   loader: () => import(/* webpackChunkName: "dashboard" */ './dashboard'),
   loading: () => null,
-  modules: ['dashboard']
+  modules: ['dashboard'],
+  webpack: () => [require.resolveWeak('./dashboard')]
 });
 
 const Login = Loadable({
   loader: () => import(/* webpackChunkName: "login" */ './login'),
   loading: () => null,
-  modules: ['login']
+  modules: ['login'],
+  webpack: () => [require.resolveWeak('./login')]
 });
 
 const Logout = Loadable({
   loader: () => import(/* webpackChunkName: "logout" */ './logout'),
   loading: () => null,
-  modules: ['logout']
+  modules: ['logout'],
+  webpack: () => [require.resolveWeak('./logout')]
 });
 
 const Profile = Loadable({
   loader: () => import(/* webpackChunkName: "profile" */ './profile'),
   loading: () => null,
-  modules: ['profile']
+  modules: ['profile'],
+  webpack: () => [require.resolveWeak('./profile')]
 });
 
 export default () => (
