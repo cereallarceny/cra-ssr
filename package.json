@@ -1,8 +1,17 @@
 {
   "name": "cra-ssr",
+  "description": "Server-side rendering with create-react-app, React Router v4, Helmet, Redux, and Thunk",
   "homepage": "https://cra-ssr.herokuapp.com",
   "version": "0.1.0",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnsht/cra-ssr.git"
+  },
+  "author": "Moonshot <contact@mns.ht>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mnsht/cra-ssr/issues"
+  },
   "dependencies": {
     "@babel/core": "^7.1.2",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
