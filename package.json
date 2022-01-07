@@ -5,12 +5,12 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mnsht/cra-ssr.git"
+    "url": "git+https://github.com/cereallarceny/cra-ssr.git"
   },
   "author": "Moonshot <contact@mns.ht>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mnsht/cra-ssr/issues"
+    "url": "https://github.com/cereallarceny/cra-ssr/issues"
   },
   "dependencies": {
     "@babel/core": "^7.1.2",
